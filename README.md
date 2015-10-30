@@ -1,33 +1,26 @@
-Scapegoat
+Find-chinese
 =========
 
-A small library providing utility methods to `escape` and `unescape` HTML entities
+Find chinese in your project code.
 
 ## Installation
 
-  npm install scapegoat --save
+  ```bash
+  npm install -g find-chinese
+  ```
 
 ## Usage
 
-  var scapegoat = require('scapegoat')
-      escape = scapegoat.escape,
-      unescape = scapegoat.unescape;
-
-  var html = '<h1>Hello World</h1>',
-      escaped = escape(html),
-      unescaped = unescape(escaped);
-
-  console.log('html', html, 'escaped', escaped, 'unescaped', unescaped);
+  ```bash
+  find-chinese --path=wow/chrome/browser --suffix=["html","js","css"]
+  ```
 
 ## Tests
 
-  npm test
 
 ## Contributing
 
-In lieu of a formal styleguide, take care to maintain the existing coding style.
-Add unit tests for any new or changed functionality. Lint and test your code.
 
 ## Release History
 
-* 0.1.0 Initial release
+* 0.0.2 Initial release

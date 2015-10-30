@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-// 命令行执行: find_chinese.js wow/chrome/browser ['.html', '.js', '.css']
+// commond line: find-chinese --path=wow/chrome/browser --suffix=["html","js","css"]
 
 'use strict';
 
@@ -12,17 +12,17 @@ var fs = require('fs'),
   .boolean('cors')
   .argv;
 
-var fileSuffix = process.argv[2] || [];
+var fileSuffix = argv.suffix || [];
 var walk = findChinese.walk;
 var readFile = findChinese.readFile;
 
 if (argv.h || argv.help) {
   console.log([
-    'usage: find-chinese [path] [fileSuffix]',
+    'usage: find-chinese [path] [suffix]',
     '',
     'options:',
     '  path           directory path to find',
-    '  fileSuffix     file suffixs array, like [".html", ".js", ".css"]',
+    '  suffix     file suffixs array, like ["html","js","css"]'
   ].join('\n'));
   process.exit();
 }
@@ -31,11 +31,11 @@ fs.writeFile('chinese.txt', '', function(err) {
   if (err) throw err;
 });
 
-walk(process.argv[1] || '.', fileSuffix, function(err, results) {
+walk(argv.path || '.', fileSuffix, function(err, results) {
   if (err) throw err;
-  console.log('查找路径：', process.argv[1] || '.');  
-  console.log('共找到' + results.length + '个文件 in', fileSuffix);
-  console.log('请到chinese.txt查看结果');
+  console.log('find path:', process.argv[1] || '.');  
+  console.log('total find:' + results.length + ' files in', fileSuffix);
+  console.log('"chinese.txt" is the result');
 
   for (var i = 0; i < results.length; i++) {
     readFile(results[i]);
