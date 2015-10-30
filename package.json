@@ -2,7 +2,10 @@
   "name": "find-chinese",
   "version": "0.0.1",
   "description": "find chinese in you code.",
-  "main": "index.js",
+  "main": "lib/find-chinese.js",
+  "bin": {
+    "find-chinese": "bin/find-chinese"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
