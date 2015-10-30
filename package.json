@@ -1,6 +1,6 @@
 {
   "name": "find-chinese",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "find chinese in you code.",
   "main": "lib/find-chinese.js",
   "bin": {
