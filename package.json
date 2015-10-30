@@ -23,6 +23,9 @@
     "url": "https://github.com/aoto/find-chinese/issues"
   },
   "homepage": "https://github.com/aoto/find-chinese#readme",
+  "dependencies": {
+    "optimist": "^0.6.1"
+  },
   "devDependencies": {
     "optimist": "^0.6.1"
   }
