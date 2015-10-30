@@ -1,0 +1,23 @@
+{
+  "name": "find-chinese",
+  "version": "0.0.1",
+  "description": "find chinese in you code.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:aoto/find-chinese.git"
+  },
+  "keywords": [
+    "chinese",
+    "find-chinese"
+  ],
+  "author": "aoto <aoto_yu@163.com> (http://aoto.github.io/)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aoto/find-chinese/issues"
+  },
+  "homepage": "https://github.com/aoto/find-chinese#readme"
+}
