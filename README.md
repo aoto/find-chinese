@@ -14,6 +14,8 @@ Find chinese in your project code.
   ```bash
   find-chinese --path=wow/chrome/browser --suffix=["html","js","css"]
   ```
+  
+  The result will be in `chinese.txt`
 
 ## Tests
 
